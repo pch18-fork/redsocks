@@ -117,11 +117,11 @@ int redsocks_gettimeofday(struct timeval *tv)
 
 char *redsocks_evbuffer_readline(struct evbuffer *buf)
 {
-#if _EVENT_NUMERIC_VERSION >= 0x02000000
+// #if _EVENT_NUMERIC_VERSION >= 0x02000000
 	return evbuffer_readln(buf, NULL, EVBUFFER_EOL_CRLF);
-#else
-	return evbuffer_readline(buf);
-#endif
+// #else
+// 	return evbuffer_readline(buf);
+// #endif
 }
 
 int red_socket_client(int type)
