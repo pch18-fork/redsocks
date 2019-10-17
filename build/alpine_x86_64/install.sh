@@ -7,6 +7,7 @@ chmod +x /usr/bin/redsocks
 chmod +x /etc/init.d/redsocksd
 rc-update add redsocksd boot
 
+apk add iptables
 iptables -t nat -A OUTPUT -d 192.168.0.0/16 -j RETURN
 iptables -t nat -A OUTPUT -d 127.0.0.0/8 -j RETURN
 iptables -t nat -A OUTPUT -d proxy.itc.kansai-u.ac.jp -j RETURN
