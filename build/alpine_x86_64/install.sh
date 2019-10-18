@@ -12,6 +12,7 @@ iptables -t nat -A OUTPUT -d 192.168.0.0/16 -j RETURN
 iptables -t nat -A OUTPUT -d 127.0.0.0/8 -j RETURN
 iptables -t nat -A OUTPUT -d proxy.itc.kansai-u.ac.jp -j RETURN
 iptables -t nat -A OUTPUT -p tcp -j REDIRECT --to-ports 12345
+iptables -t nat -A PREROUTING -p tcp -j REDIRECT --to-ports 12345
 service iptables save
 rc-update add iptables boot
 
