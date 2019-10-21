@@ -3,7 +3,7 @@
 description="Transparent socks redirector"
 
 CFGFILE="/etc/redsocks.conf"
-PIDFILE="/var/run/redsocksd.pid"
+PIDFILE="/var/run/redsocks.pid"
 
 depend() {
         need localmount net
