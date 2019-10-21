@@ -32,4 +32,3 @@ service iptables save
 cp /etc/iptables/rules-save /etc/iptables/rules-save_origin
 rc-update add iptables boot
 
-
